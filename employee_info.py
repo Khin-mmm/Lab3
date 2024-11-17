@@ -23,7 +23,9 @@ def calculate_average_salary():
     average = 0
 
     #add your implementation to calculate here
-
+    for employee in employee_data:
+        total += employee["salary"]
+    average = total / len(employee_data)
 
     return average
 
@@ -47,7 +49,7 @@ def display_records(employee_info):
         print((item["name"] + "\t" + str(item["age"]) + "\t" + item["department"] + "\t" + str(item["salary"])).expandtabs(15))
 
 def display_main_menu():
-
+    
     print("\n----- Employee information Tracker -----")
 
     print("Select option\n")
